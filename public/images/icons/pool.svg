@@ -1,0 +1,18 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1672_5376)">
+<foreignObject x="2" y="27.5" width="44" height="18.5"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(2px);clip-path:url(#bgblur_1_1672_5376_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="4" d="M6 39C10.5 39 10.5 42 15 42C19.5 42 19.5 39 24 39C28.5 39 28.5 42 33 42C37.5 42 37.5 39 42 39V31.5C37.5 31.5 37.5 34.5 33 34.5C28.5 34.5 28.5 31.5 24 31.5C19.5 31.5 19.5 34.5 15 34.5C10.5 34.5 10.5 31.5 6 31.5V39Z" fill="white" fill-opacity="0.2"/>
+<path d="M16.5 10.5H31.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5 16.5H31.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5 22.5H31.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5 6V26.5106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.5 6V26.8669" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 31.5C10.5 31.5 10.5 34.5 15 34.5C19.5 34.5 19.5 31.5 24 31.5C28.5 31.5 28.5 34.5 33 34.5C37.5 34.5 37.5 31.5 42 31.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 39C10.5 39 10.5 42 15 42C19.5 42 19.5 39 24 39C28.5 39 28.5 42 33 42C37.5 42 37.5 39 42 39" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="bgblur_1_1672_5376_clip_path" transform="translate(-2 -27.5)"><path d="M6 39C10.5 39 10.5 42 15 42C19.5 42 19.5 39 24 39C28.5 39 28.5 42 33 42C37.5 42 37.5 39 42 39V31.5C37.5 31.5 37.5 34.5 33 34.5C28.5 34.5 28.5 31.5 24 31.5C19.5 31.5 19.5 34.5 15 34.5C10.5 34.5 10.5 31.5 6 31.5V39Z"/>
+</clipPath><clipPath id="clip0_1672_5376">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

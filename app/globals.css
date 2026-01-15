@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #3c8aa4;
+  --color-primary-dark: #004964;
+  --color-secondary: #db6e1a;
+  --color-tertiary: #db6e1a;
+  --color-gray: #8d8d8d;
+  --color-light: #dadada;
+  --color-dark-gray: #323232;
+
+  --color-product-oro-primary: #825127;
+  --color-product-oro-secondary: #ef7003;
+
+  --color-product-saint-michel-primary: #59282c;
+  --color-product-saint-michel-secondary: #ab913b;
+
+  --background-image-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    font-family: var(--font-albert-sans), system-ui, sans-serif;
   }
 }
 
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Albert Sans, Arial, sans-serif;
+  @apply font-normal overflow-x-hidden;
+}
+
+a {
+  @apply transition-all duration-500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-extralight;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+h2 {
+  @apply text-5xl;
+  line-height: 56px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.container {
+  @apply mx-auto w-full;
+  max-width: 1370px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.button {
+  @apply px-6 h-14 flex items-center gap-x-2 text-center font-semibold text-sm justify-center max-w-fit;
+}
+button {
+  cursor: pointer;
+}
+
+.blur-mask {
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.arrow-slider {
+  @apply text-white bg-dark-gray hover:bg-primary transition focus:outline-none cursor-pointer h-14 w-14 top-1/2 -translate-y-1/2 p-3 flex items-center justify-center z-20;
 }
