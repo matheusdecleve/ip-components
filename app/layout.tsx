@@ -10,6 +10,9 @@ import { navbarData } from "@/src/data/navbar";
 import { HeaderHero } from "@/components/header-hero";
 import { headerHeroData } from "@/src/data/header-hero";
 
+import { HeaderHeroPage } from "@/components/header-hero-page";
+import { headerHeroPageData } from "@/src/data/header-hero-page";
+
 const albertSans = Albert_Sans({
   subsets: ["latin"],
   variable: "--font-albert-sans",
@@ -32,6 +35,7 @@ export default function RootLayout({
         <AnimationProvider>
           <Navbar {...navbarData} />
           <HeaderHero {...headerHeroData} />
+          <HeaderHeroPage {...headerHeroPageData} />
           {children}
         </AnimationProvider>
       </body>

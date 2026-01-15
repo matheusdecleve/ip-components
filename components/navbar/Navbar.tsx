@@ -23,12 +23,7 @@ export function Navbar({ variant = "white", logoBlue, logoWhite, links, actions 
   const isTransparent = variant === "transparent" && !isScrolled;
 
   return (
-    <header
-      className={clsx(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isTransparent ? "bg-transparent" : "bg-white border-b border-[#DADADA]"
-      )}
-    >
+    <header className={clsx("fixed top-0 left-0 w-full z-50 transition-all duration-300", isTransparent ? "bg-transparent" : "bg-white")}>
       <div className="container flex items-center justify-between py-3">
         {/* LOGO + NAV */}
         <div className="flex items-center gap-x-[64px]">

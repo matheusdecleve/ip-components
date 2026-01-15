@@ -20,27 +20,25 @@ export function HeaderHero({ title, description, backgroundImage, linesImage, bu
     const ctx = gsap.context(() => {
       if (linesRef.current) {
         gsap.from(linesRef.current, {
-          yPercent: 80,
+          yPercent: 20,
           opacity: 0,
           ease: "power3.out",
-          duration: 2,
+          duration: 4,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%",
-            scrub: 2,
+            start: "top 10%",
           },
         });
       }
 
       if (backgroundRef.current) {
         gsap.from(backgroundRef.current, {
-          scale: 1.4,
+          scale: 1.2,
           ease: "power3.out",
-          duration: 2,
+          duration: 4,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 80%",
-            scrub: 2,
+            start: "top 10%",
           },
         });
       }
@@ -53,26 +51,22 @@ export function HeaderHero({ title, description, backgroundImage, linesImage, bu
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="header-hero relative w-full min-h-screen overflow-hidden
-                 flex flex-col justify-end bg-dark-gray"
-    >
+    <section ref={sectionRef} className="w-full min-h-screen relative bg-dark-gray flex flex-col justify-end header-hero overflow-hidden">
       {/* LINHAS */}
-      <Image ref={linesRef} src={linesImage} alt="Linhas ilustrativas" fill className="absolute bottom-0 left-0 w-full h-auto object-contain" />
+      <Image ref={linesRef} src={linesImage} alt="Linhas ilustrativas" width={1200} height={600} className="absolute -bottom-20 left-0 w-full" />
 
       {/* BACKGROUND */}
       <Image ref={backgroundRef} src={backgroundImage} alt="" fill priority className="absolute top-0 left-0 w-full h-full object-cover" />
 
       {/* BLUR MASK */}
-      <div className="absolute bottom-0 left-0 w-full h-[400px] backdrop-blur-md" />
+      <div className="absolute bottom-0 left-0 w-full h-[400px] backdrop-blur-md blur-mask" />
 
       {/* CONTEÚDO */}
-      <div className="relative z-10 bg-overlay py-[100px]">
+      <div className="z-10 bg-overlay py-[100px]">
         <div className="container">
           <h1 className="text-white mb-2">{title}</h1>
 
-          <p className="text-lg text-white max-w-[640px]">{description}</p>
+          <p className="text-lg text-white">{description}</p>
 
           <div className="flex items-center gap-x-5 mt-12">
             {buttons.map((button) =>

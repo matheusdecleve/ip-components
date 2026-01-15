@@ -23,9 +23,9 @@ export const navbarData: NavbarProps = {
       href: "/parceiros",
     },
     {
-      id: "contato",
-      label: "Contato",
-      href: "/contato",
+      id: "blog",
+      label: "Blog",
+      href: "/blog",
     },
   ],
 
