@@ -42,9 +42,22 @@ export function HeaderHero({ title, description, backgroundImage, linesImage, bu
           },
         });
       }
+
+      if (sectionRef.current) {
+        gsap.to(sectionRef.current, {
+          y: -100,
+          ease: "power3.out",
+          duration: 4,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 0",
+            scrub: 2,
+          },
+        });
+      }
     }, sectionRef);
 
-    // LIMPEZA GARANTIDA
+    // CLEANUP
     return () => {
       ctx.revert();
     };

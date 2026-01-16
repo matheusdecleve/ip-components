@@ -6,12 +6,8 @@ import { AnimationProvider } from "@/components/providers/AnimationProvider";
 
 import { Navbar } from "@/components/navbar";
 import { navbarData } from "@/src/data/navbar";
-
-import { HeaderHero } from "@/components/header-hero";
-import { headerHeroData } from "@/src/data/header-hero";
-
-import { HeaderHeroPage } from "@/components/header-hero-page";
-import { headerHeroPageData } from "@/src/data/header-hero-page";
+import { Footer } from "@/components/footer";
+import { footerData } from "@/src/data/footer";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -34,9 +30,8 @@ export default function RootLayout({
       <body className={`${albertSans.variable} antialiased`}>
         <AnimationProvider>
           <Navbar {...navbarData} />
-          <HeaderHero {...headerHeroData} />
-          <HeaderHeroPage {...headerHeroPageData} />
           {children}
+          <Footer {...footerData} />
         </AnimationProvider>
       </body>
     </html>

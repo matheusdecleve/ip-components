@@ -33,7 +33,7 @@ export function useSplitHeadings() {
       });
     });
 
-    // LIMPEZA GLOBAL
+    // CLEANUP
     return () => {
       splits.forEach((split) => split.revert());
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
