@@ -1,21 +1,19 @@
 import { HeaderHeroPage } from "@/components/header-hero-page";
-import { headerHeroPageData } from "@/src/data/header-hero-page";
 
 import { Breadcrumb } from "@/components/breadcrumb";
 
 import { Navbar } from "@/components/navbar";
 import { navbarData } from "@/src/data/navbar";
 
-export default function Parceiros() {
+export default function Blog() {
   return (
     <>
       <Navbar {...navbarData} variant="white" />
       <Breadcrumb />
       <HeaderHeroPage  
-        subtitle="Parceiros"
-        title="Cadastre-se e seja um<br />parceiro Ilha Pura"
-        description="Preencha o formulário abaixo que nosso time entrará em contato." 
-      />
+        subtitle="Blog"
+        title="Leia as últimas notícias<br />do Ilha Pura"
+        description="Conheça nosso blog e descubra tudo o que acontece no bairro." />
     </>
   );
 }

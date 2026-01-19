@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeaderHeroPageProps } from "./types";
 
-export function HeaderHeroPage({ subtitle, title, description, linesImage, buttons }: HeaderHeroPageProps) {
+export function HeaderHeroPage({ subtitle, title, description, buttons }: HeaderHeroPageProps) {
   return (
     <section className="w-full min-h-[456px] relative bg-primary-dark flex flex-col justify-center header-hero-page overflow-hidden mt-[128px]">
       {/* LINHAS */}
-      {linesImage && <Image src={linesImage} alt="Linhas ilustrativas" width={1000} height={400} className="absolute bottom-0 right-0" />}
+      <Image src="/images/header-hero-product-lines.svg" alt="Linhas ilustrativas" width={1000} height={400} className="absolute bottom-0 right-0" />
 
       {/* CONTEÚDO */}
       <div className="container space-y-2 text-white">

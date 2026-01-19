@@ -57,7 +57,7 @@ export function Navbar({ variant = "white", logoBlue, logoWhite, links, actions 
               className={clsx(
                 "button flex items-center gap-x-2 transition-all",
                 action.variant === "primary"
-                  ? "bg-primary text-white hover:bg-primary-dark"
+                  ? "bg-white text-primary-dark hover:bg-primary-dark hover:text-white"
                   : isTransparent
                   ? "text-white hover:bg-white hover:text-primary-dark"
                   : "text-gray hover:bg-primary hover:text-white"

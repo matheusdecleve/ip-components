@@ -55,7 +55,7 @@ export function SectionTitle({
   ============================ */
   if (variant === "withButton") {
     return (
-      <div className="container section-title-button grid grid-cols-3">
+      <div className="container padding-section section-title-button grid grid-cols-3">
         <div className="col-span-2 space-y-2">
           {eyebrow && <span className={`text-sm ${eyebrowColorClass}`}>{eyebrow}</span>}
 
@@ -81,7 +81,7 @@ export function SectionTitle({
      VARIANT: DEFAULT
   ============================ */
   return (
-    <div className="container space-y-2 section-title">
+    <div className="container padding-section space-y-2 section-title">
       {eyebrow && <span className={`text-sm ${eyebrowColorClass}`}>{eyebrow}</span>}
 
       <h2>{title}</h2>

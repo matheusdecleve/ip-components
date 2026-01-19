@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TestimonialSliderProps } from "./types";
 
 export function TestimonialSlider({ items, autoplayDelay = 5000 }: TestimonialSliderProps) {

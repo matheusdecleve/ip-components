@@ -1,3 +1,6 @@
+import { Navbar } from "@/components/navbar";
+import { navbarData } from "@/src/data/navbar";
+
 import { HeaderHero } from "@/components/header-hero";
 import { headerHeroData } from "@/src/data/header-hero";
 
@@ -40,15 +43,11 @@ import { blogPostCardData } from "@/src/data/blog-post-card";
 import { ContactInfoBox } from "@/components/contact-info-box/ContactInfoBox";
 import { contactInfoBoxData } from "@/src/data/contact-info-box";
 
-import { Breadcrumb } from "@/components/breadcrumb";
-
 import { ProductSection } from "@/components/product-section";
 import { productCardData } from "@/src/data/product-card";
 
 import { PlantsContentTab } from "@/components/plants-content-tab";
 import { plantsContentTabData } from "@/src/data/plants-content-tab";
-import { Navbar } from "@/components/navbar";
-import { navbarData } from "@/src/data/navbar";
 
 export default function Home() {
   return (

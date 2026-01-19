@@ -1,6 +1,4 @@
 import { HeaderHeroPage } from "@/components/header-hero-page";
-import { headerHeroPageData } from "@/src/data/header-hero-page";
-
 import { Breadcrumb } from "@/components/breadcrumb";
 
 import { Navbar } from "@/components/navbar";

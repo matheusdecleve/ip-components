@@ -70,6 +70,12 @@ h4 {
 .padding-section {
   padding: 62px 0;
 }
+.padding-top-section {
+  padding-top: 62px;
+}
+.padding-bottom-section {
+  padding-bottom: 62px;
+}
 
 .container {
   @apply mx-auto w-full;
@@ -97,3 +103,22 @@ button {
 .arrow-slider img {
   @apply w-6 h-6;
 }
+
+/*Product grid - products image cards*/
+
+.product-image-card__big {
+  @apply col-span-3 h-[520px];
+}
+.product-image-card__big .product-image-card__title,
+.product-image-card__medium .product-image-card__title {
+  @apply !text-[32px] !leading-10;
+}
+
+.product-image-card__medium {
+  @apply col-span-2 h-[400px];
+}
+
+.product-image-card__small {
+  @apply col-span-1 h-[400px];
+}
+

@@ -4,8 +4,6 @@ import "./globals.css";
 
 import { AnimationProvider } from "@/components/providers/AnimationProvider";
 
-import { Navbar } from "@/components/navbar";
-import { navbarData } from "@/src/data/navbar";
 import { Footer } from "@/components/footer";
 import { footerData } from "@/src/data/footer";
 
@@ -16,7 +14,7 @@ const albertSans = Albert_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ilha Pura - components",
+  title: "Ilha Pura",
   description: "By Hagens",
 };
 
