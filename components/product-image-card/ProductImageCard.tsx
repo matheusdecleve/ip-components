@@ -4,7 +4,7 @@ import { ProductImageCardData } from "./types";
 
 export function ProductImageCard({ id, title, cssClass, image, logo, price, href, tags }: ProductImageCardData) {
   return (
-    <div className={`product-image-card relative ${cssClass}`} id={`product-${id}`}>
+    <div className={`product-image-card relative group ${cssClass}`} id={`product-${id}`}>
       <Link href={href}>
         <div className="w-full h-full relative bg-dark-gray flex flex-col justify-end overflow-hidden">
           <Image
@@ -12,7 +12,7 @@ export function ProductImageCard({ id, title, cssClass, image, logo, price, href
             alt={`Imagem do empreendimento ${title}`}
             width={1200}
             height={420}
-            className="absolute inset-0 w-full h-full object-cover z-10 product-image-banner__img"
+            className="absolute inset-0 w-full h-full object-cover z-10 group-hover:scale-110 transition-all duration-700 product-image-banner__img"
           />
       
           <div className="absolute bottom-0 left-0 w-full h-[270px] z-20 backdrop-blur-md blur-mask"></div>
@@ -20,7 +20,7 @@ export function ProductImageCard({ id, title, cssClass, image, logo, price, href
             <div className={`mb-6 text-white ${cssClass !== 'product-image-card__small' ? 'flex items-center' : ''}`}>
               <img src={logo} alt={`Logo ${title}`} className="max-h-[72px] max-w-[280px]" />
               {cssClass === 'product-image-card__small' ? (
-                <div className="h-[1px] w-full border-t border-gray block mt-6 mb-4"></div>
+                <div className="h-px w-full border-t border-gray block mt-6 mb-4"></div>
               ) : (
                 <div className="h-14 border-l border-white ms-10 me-6"></div>
               )}
