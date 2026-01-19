@@ -28,7 +28,7 @@ export function Breadcrumb({ labels = {} }: BreadcrumbProps) {
   });
 
   return (
-    <div className="text-xs text-[#868686] border-t border-b border-[#DADADA] py-4">
+    <div className="fixed left-0 top-20 z-50 text-xs text-[#868686] border-t border-b border-[#DADADA] w-full bg-white h-12 flex items-center">
       <div className="container flex items-center gap-x-2">
         <Image src="/images/icons/house.svg" alt="Ícone de uma casa" width={16} height={16} />
 

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { ImageContentTabsProps } from "./types";
+import { ImageContentTabProps } from "./types";
 
-export function ImageContentTabs({ items }: ImageContentTabsProps) {
+export function ImageContentTabs({ items }: ImageContentTabProps) {
   const initialIndex = items.findIndex((item) => item.active) >= 0 ? items.findIndex((item) => item.active) : 0;
 
   const [activeIndex, setActiveIndex] = useState(initialIndex);

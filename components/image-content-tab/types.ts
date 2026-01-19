@@ -6,6 +6,6 @@ export interface ImageContentTabItem {
   active?: boolean;
 }
 
-export interface ImageContentTabsProps {
+export interface ImageContentTabProps {
   items: ImageContentTabItem[];
 }

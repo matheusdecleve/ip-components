@@ -9,6 +9,6 @@ export interface HeaderHeroPageProps {
   subtitle: string;
   title: string;
   description: string;
-  linesImage: string;
-  buttons: HeaderHeroPageButton[];
+  linesImage?: string;
+  buttons?: HeaderHeroPageButton[];
 }

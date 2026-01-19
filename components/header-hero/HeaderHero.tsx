@@ -45,7 +45,7 @@ export function HeaderHero({ title, description, backgroundImage, linesImage, bu
 
       if (sectionRef.current) {
         gsap.to(sectionRef.current, {
-          y: -100,
+          y: -60,
           ease: "power3.out",
           duration: 4,
           scrollTrigger: {
@@ -64,7 +64,7 @@ export function HeaderHero({ title, description, backgroundImage, linesImage, bu
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full min-h-screen relative bg-dark-gray flex flex-col justify-end header-hero overflow-hidden">
+    <section ref={sectionRef} className="w-full min-h-screen relative bg-dark-gray flex flex-col justify-end header-hero overflow-hidden z-20">
       {/* LINHAS */}
       <Image ref={linesRef} src={linesImage} alt="Linhas ilustrativas" width={1200} height={600} className="absolute -bottom-20 left-0 w-full" />
 

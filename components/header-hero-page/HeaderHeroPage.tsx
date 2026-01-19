@@ -6,9 +6,9 @@ import { HeaderHeroPageProps } from "./types";
 
 export function HeaderHeroPage({ subtitle, title, description, linesImage, buttons }: HeaderHeroPageProps) {
   return (
-    <section className="w-full min-h-[456px] relative bg-primary-dark flex flex-col justify-center header-hero-page overflow-hidden">
+    <section className="w-full min-h-[456px] relative bg-primary-dark flex flex-col justify-center header-hero-page overflow-hidden mt-[128px]">
       {/* LINHAS */}
-      <Image src={linesImage} alt="Linhas ilustrativas" width={1000} height={400} className="absolute bottom-0 right-0" />
+      {linesImage && <Image src={linesImage} alt="Linhas ilustrativas" width={1000} height={400} className="absolute bottom-0 right-0" />}
 
       {/* CONTEÚDO */}
       <div className="container space-y-2 text-white">
@@ -17,7 +17,7 @@ export function HeaderHeroPage({ subtitle, title, description, linesImage, butto
         <p>{description}</p>
 
         <div className="flex items-center gap-x-5 mt-8">
-          {buttons.map((button) =>
+          {buttons?.map((button) =>
             button.variant === "primary" ? (
               <Link key={button.id} href={button.href} className="bg-white text-primary-dark button">
                 {button.label}

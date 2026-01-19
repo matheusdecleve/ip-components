@@ -14,6 +14,7 @@ export function Navbar({ variant = "white", logoBlue, logoWhite, links, actions 
 
     const onScroll = () => {
       setIsScrolled(window.scrollY > 40);
+      console.log("scroll");
     };
 
     window.addEventListener("scroll", onScroll);
@@ -23,11 +24,13 @@ export function Navbar({ variant = "white", logoBlue, logoWhite, links, actions 
   const isTransparent = variant === "transparent" && !isScrolled;
 
   return (
-    <header className={clsx("fixed top-0 left-0 w-full z-50 transition-all duration-300", isTransparent ? "bg-transparent" : "bg-white")}>
+    <header className={clsx("w-full z-50 transition-all duration-300 fixed top-0 left-0", isTransparent ? "bg-transparent" : "bg-white")}>
       <div className="container flex items-center justify-between py-3">
         {/* LOGO + NAV */}
         <div className="flex items-center gap-x-[64px]">
-          <Image src={isTransparent ? logoWhite : logoBlue} alt="Logo Ilha Pura" width={181} height={48} priority />
+          <Link href="/">
+            <Image src={isTransparent ? logoWhite : logoBlue} alt="Logo Ilha Pura" width={181} height={48} priority />
+          </Link>
 
           <nav className="flex items-center gap-x-[48px]">
             {links.map((link) => (

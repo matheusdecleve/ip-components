@@ -25,7 +25,7 @@ import { testimonialSliderData } from "@/src/data/testimonial-slider";
 import { FullscreenImageSlider } from "@/components/fullscreen-image-slider";
 import { fullscreenImageSliderData } from "@/src/data/fullscreen-image-slider";
 
-import { ImageContentTabs } from "@/components/image-content-tabs";
+import { ImageContentTabs } from "@/components/image-content-tab";
 import { imageContentTabsData } from "@/src/data/image-content-tabs";
 
 import { GalleryRow } from "@/components/gallery-row";
@@ -45,14 +45,19 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { ProductSection } from "@/components/product-section";
 import { productCardData } from "@/src/data/product-card";
 
+import { PlantsContentTab } from "@/components/plants-content-tab";
+import { plantsContentTabData } from "@/src/data/plants-content-tab";
+import { Navbar } from "@/components/navbar";
+import { navbarData } from "@/src/data/navbar";
+
 export default function Home() {
   return (
     <>
+      <Navbar {...navbarData} />
       <HeaderHero {...headerHeroData} />
       <SectionTitle {...sectionTitleData} />
       <HeaderHeroPage {...headerHeroPageData} />
       <HeaderHeroProduct {...headerHeroProductData} />
-      <Breadcrumb />
       <IconBox items={iconBoxData} />
       <FeaturedCard items={featuredCardData} />
       <ImageCard items={imageCardData} />
@@ -63,6 +68,7 @@ export default function Home() {
       <FaqContent items={faqContentData} />
       <BlogPostCard {...blogPostCardData} />
       <ProductSection products={productCardData} />
+      <PlantsContentTab plants={plantsContentTabData} />
       <ContactInfoBox items={contactInfoBoxData} />
     </>
   );

@@ -1,4 +1,4 @@
-import { ImageContentTabItem } from "@/components/image-content-tabs/types";
+import { ImageContentTabItem } from "@/components/image-content-tab/types";
 
 export const imageContentTabsData: ImageContentTabItem[] = [
   {

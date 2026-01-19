@@ -29,7 +29,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${albertSans.variable} antialiased`}>
         <AnimationProvider>
-          <Navbar {...navbarData} />
           {children}
           <Footer {...footerData} />
         </AnimationProvider>
