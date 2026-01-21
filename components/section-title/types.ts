@@ -6,6 +6,7 @@ export interface SectionTitleAction {
 
 export interface SectionTitleProps {
   variant?: "default" | "withButton" | "twoColumns";
+  cssClass?: string;
 
   eyebrow?: string;
   eyebrowColorClass?: string;

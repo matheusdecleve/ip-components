@@ -67,7 +67,7 @@ export function HeaderHero({ title, description, backgroundImage, linesImage, bu
     <section ref={sectionRef} className="w-full min-h-screen relative bg-dark-gray flex flex-col justify-end header-hero overflow-hidden z-20">
       {/* LINHAS */}
       {linesImage && (
-        <Image ref={linesRef} src={linesImage} alt="Linhas ilustrativas" width={1200} height={600} className="absolute -bottom-20 left-0 w-full" />
+        <Image ref={linesRef} fetchPriority="high" src={linesImage} alt="Linhas ilustrativas" width={1200} height={600} className="absolute -bottom-20 left-0 w-full" />
       )}
 
       {/* BACKGROUND */}

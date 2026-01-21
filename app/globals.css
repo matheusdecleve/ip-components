@@ -79,7 +79,7 @@ h4 {
 
 .container {
   @apply mx-auto w-full;
-  max-width: 1370px;
+  max-width: 1520px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -121,3 +121,13 @@ button {
   @apply col-span-1 h-[400px];
 }
 
+
+/*Sessão de formulário*/
+.section-form {
+  background-image: url('/images/bg-form.png');
+}
+
+/*Sessão de experience gallery animação*/
+.experience-gallery img {
+  max-width: 75%;
+}

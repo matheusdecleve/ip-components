@@ -13,7 +13,7 @@ export default function Parceiros() {
       <Breadcrumb />
       <HeaderHeroPage  
         subtitle="Parceiros"
-        title="Cadastre-se e seja um<br />parceiro Ilha Pura"
+        title="Cadastre-se e seja um <br /> parceiro Ilha Pura"
         description="Preencha o formulário abaixo que nosso time entrará em contato." 
       />
     </>

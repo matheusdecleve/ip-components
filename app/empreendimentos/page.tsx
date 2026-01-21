@@ -5,6 +5,7 @@ import { SectionTitle, SectionTitleProps } from "@/components/section-title";
 import { Navbar } from "@/components/navbar";
 import { navbarData } from "@/src/data/navbar";
 import { ProductImageCard } from "@/components/product-image-card";
+import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
 
@@ -169,6 +170,15 @@ export default function Home() {
       ],
     },
   ];
+
+  const sectionTitleFormData: SectionTitleProps = {
+    variant: "default",
+    cssClass: "!p-0",
+    eyebrow: "Contato",
+    eyebrowColorClass: "text-primary",
+    title: "Fale conosco",
+    description: "Tire dúvidas, solicite informações e agende uma visita diretamente com nosso time. ",
+  }; 
   
 
   return (
@@ -177,7 +187,7 @@ export default function Home() {
       <HeaderHero {...headerHeroData} />
       <SectionTitle {...sectionTitleData} />
 
-      <div className="container padding-bottom-section grid grid-cols-3 gap-x-5 gap-y-8">
+      <div className="container padding-bottom-section grid grid-cols-3 gap-x-5 gap-y-8 !pb-[120px]">
         {productsImageCards.map((product) => (
           <ProductImageCard
             key={product.id}
@@ -191,6 +201,23 @@ export default function Home() {
             {...product}
           />
         ))}
+      </div>
+
+      <div className="py-[100px] section-form bg-cover">
+        <div className="max-w-2xl mx-auto bg-white py-12 px-14">
+          <SectionTitle {...sectionTitleFormData} />
+          <ContactForm
+            color="primary"
+            products={[
+              { value: "astra", label: "Astra" },
+              { value: "elos", label: "Elos" },
+              { value: "millenio", label: "Millenio" },
+              { value: "oro", label: "Oro" },
+              { value: "saint-michel", label: "Saint Michel" },
+              { value: "viure", label: "Viure" },
+            ]}
+          />
+        </div>
       </div>
 
     </>

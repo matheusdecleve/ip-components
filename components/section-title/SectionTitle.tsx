@@ -10,13 +10,14 @@ export function SectionTitle({
   description,
   button,
   actions,
+  cssClass
 }: SectionTitleProps) {
   /* ===========================
      VARIANT: TWO COLUMNS
   ============================ */
   if (variant === "twoColumns") {
     return (
-      <div className="container padding-section">
+      <div className={`container padding-section ${cssClass}`}>
         {eyebrow && <span className={`text-sm ${eyebrowColorClass}`}>{eyebrow}</span>}
 
         <div className="grid grid-cols-2 items-center mt-4">
@@ -55,9 +56,9 @@ export function SectionTitle({
   ============================ */
   if (variant === "withButton") {
     return (
-      <div className="container padding-section section-title-button grid grid-cols-3">
-        <div className="col-span-2 space-y-2">
-          {eyebrow && <span className={`text-sm ${eyebrowColorClass}`}>{eyebrow}</span>}
+      <div className={`container padding-section section-title-button flex justify-between ${cssClass}`}>
+        <div className="space-y-2">
+          {eyebrow && <span className={`text-sm mb-2 block ${eyebrowColorClass}`}>{eyebrow}</span>}
 
           <h2>{title}</h2>
 
@@ -81,8 +82,8 @@ export function SectionTitle({
      VARIANT: DEFAULT
   ============================ */
   return (
-    <div className="container padding-section space-y-2 section-title">
-      {eyebrow && <span className={`text-sm ${eyebrowColorClass}`}>{eyebrow}</span>}
+    <div className={`container padding-section space-y-2 section-title ${cssClass}`}>
+      {eyebrow && <span className={`text-sm mb-2 block ${eyebrowColorClass}`}>{eyebrow}</span>}
 
       <h2>{title}</h2>
 

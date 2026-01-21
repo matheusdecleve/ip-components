@@ -1,74 +1,109 @@
+'use client'
+
 import { Navbar } from "@/components/navbar";
 import { navbarData } from "@/src/data/navbar";
 
 import { HeaderHero } from "@/components/header-hero";
 import { headerHeroData } from "@/src/data/header-hero";
 
-import { HeaderHeroPage } from "@/components/header-hero-page";
-import { headerHeroPageData } from "@/src/data/header-hero-page";
-
-import { HeaderHeroProduct } from "@/components/header-hero-product";
-import { headerHeroProductData } from "@/src/data/header-hero-product";
-
 import { SectionTitle } from "@/components/section-title";
-import { sectionTitleData } from "@/src/data/section-title";
-
-import { IconBox } from "@/components/icon-box";
-import { iconBoxData } from "@/src/data/icon-box";
 
 import { FeaturedCard } from "@/components/featured-card";
 import { featuredCardData } from "@/src/data/featured-card";
 
-import { ImageCard } from "@/components/image-card";
-import { imageCardData } from "@/src/data/image-card";
-
-import { TestimonialSlider } from "@/components/testimonial-slider";
-import { testimonialSliderData } from "@/src/data/testimonial-slider";
-
-import { FullscreenImageSlider } from "@/components/fullscreen-image-slider";
-import { fullscreenImageSliderData } from "@/src/data/fullscreen-image-slider";
-
-import { ImageContentTabs } from "@/components/image-content-tab";
-import { imageContentTabsData } from "@/src/data/image-content-tabs";
-
-import { GalleryRow } from "@/components/gallery-row";
-import { galleryRowData } from "@/src/data/gallery-row";
-
-import { FaqContent } from "@/components/faq-content";
-import { faqContentData } from "@/src/data/faq-content";
-
 import { BlogPostCard } from "@/components/blog-post-card";
 import { blogPostCardData } from "@/src/data/blog-post-card";
 
-import { ContactInfoBox } from "@/components/contact-info-box/ContactInfoBox";
-import { contactInfoBoxData } from "@/src/data/contact-info-box";
-
-import { ProductSection } from "@/components/product-section";
-import { productCardData } from "@/src/data/product-card";
-
-import { PlantsContentTab } from "@/components/plants-content-tab";
-import { plantsContentTabData } from "@/src/data/plants-content-tab";
+import { ExperienceGallery } from "@/components/experience-gallery";
 
 export default function Home() {
+  const sectionTitleButton = {
+    label: 'Encontre o imóvel ideal pra você',
+    href: '#!',
+    icon: '/images/icons/search.svg',
+  };
   return (
     <>
       <Navbar {...navbarData} />
       <HeaderHero {...headerHeroData} />
-      <SectionTitle {...sectionTitleData} />
-      <HeaderHeroPage {...headerHeroPageData} />
-      <HeaderHeroProduct {...headerHeroProductData} />
-      <IconBox items={iconBoxData} />
+      <SectionTitle variant="withButton" title="Explore os condomínios desse projeto icônico" eyebrow="Empreendimentos" eyebrowColorClass="text-primary" description="Cada endereço em Ilha Pura reserva detalhes únicos e especiais para uma vida completa." button={sectionTitleButton} />
+      <ExperienceGallery
+        subtitle="Sobre o bairro"
+        title="Experimente o melhor <br /> da vida ao seu redor"
+        description="PParque Ilha Pura com 72 mil m² de área livre, segurança 24h e conveniências do lado de casa."
+        buttonLabel="Viva essa experiência"
+        buttonHref="#"
+        images={[
+          {
+            id: 1,
+            width: 407,
+            height: 270,
+            src: "/images/experience/1.jpg",
+            alt: "Imagem 1",
+            className: "top-12 left-10 max-w-1/3",
+          },
+          {
+            id: 2,
+            width: 330,
+            height: 231,
+            src: "/images/experience/2.jpg",
+            alt: "Imagem 2",
+            className: "top-12 left-3/8",
+          },
+          {
+            id: 3,
+            width: 327,
+            height: 327,
+            src: "/images/experience/3.jpg",
+            alt: "Imagem 3",
+            className: "top-8 left-5/8",
+          },
+          {
+            id: 4,
+            width: 288,
+            height: 192,
+            src: "/images/experience/4.jpg",
+            alt: "Imagem 4",
+            className: "top-2/7 -right-20",
+          },
+          {
+            id: 5,
+            width: 275,
+            height: 346,
+            src: "/images/experience/5.jpg",
+            alt: "Imagem 5",
+            className: "top-3/7 left-0",
+          },
+          {
+            id: 6,
+            width: 560,
+            height: 350,
+            src: "/images/experience/6.jpg",
+            alt: "Imagem 6",
+            className: "bottom-0 left-60",
+          },
+          {
+            id: 7,
+            width: 444,
+            height: 302,
+            src: "/images/experience/7.jpg",
+            alt: "Imagem 7",
+            className: "bottom-0 left-5/10",
+          },
+          {
+            id: 8,
+            width: 464,
+            height: 346,
+            src: "/images/experience/8.jpg",
+            alt: "Imagem 8",
+            className: "bottom-20 -right-40",
+          },
+        ]}
+      />
+
+      <SectionTitle title="Um bairro pronto para viver com tudo" eyebrow="Destaques" description="Tudo o que você e sua família precisam para um dia a dia com facilidades." />
       <FeaturedCard items={featuredCardData} />
-      <ImageCard items={imageCardData} />
-      <TestimonialSlider items={testimonialSliderData} />
-      <FullscreenImageSlider slides={fullscreenImageSliderData} />
-      <ImageContentTabs items={imageContentTabsData} />
-      <GalleryRow {...galleryRowData} />
-      <FaqContent items={faqContentData} />
       <BlogPostCard {...blogPostCardData} />
-      <ProductSection products={productCardData} />
-      <PlantsContentTab plants={plantsContentTabData} />
-      <ContactInfoBox items={contactInfoBoxData} />
     </>
   );
 }
